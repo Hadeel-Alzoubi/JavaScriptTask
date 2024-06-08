@@ -2,34 +2,39 @@
 //     * The two passwords must match.
 //   - By default the submit button should be hidden. Display the button only when there are no errors.
 
+function checkpass() {
+    let pass = document.getElementById("pass");
+    let confirm = document.getElementById("confirm");
+    let errormatch = document.querySelector('.errormatch');
+    let errorlin = document.querySelector('.errorlin');
+    let btn = document.getElementById("btn");
+    
+    if (pass.value.length < 6) {
+        errorlin.style.display = 'inline';
+    }
+    else
+    {
+        errorlin.style.display = 'none'
 
-// function pass() {
-//     let x = document.getElementById("pass");
-//     let y =document.getElementById("con")
-//     if(x.value.length < 6)  
-//         {
-//             document.getElementById("pass") = "The pass must be 6 char at least";
-//         }
-//     if(y != x )
-//         {
-//             window.Error("The passowrd not mach");
-//         }
-//         console.log(x.length);
-//         console.log(x);
-// }
+        if(confirm.value === pass.value){
 
-// // function confirm() {
-// //     let x =document.getElementById("con")
-// //     if (x == ) {
-        
-// //     }
-// // }
+            btn.style.display='inline';
+            errormatch.style.display ='none'
 
-// function btn() {
-//     let x = document.getElementById("btn");
-//     if (pass() == true )
-//         { 
-//             x.style.visibility = 'visible';
-//         }   
-// }
-
+        }
+        else
+        {
+            btn.style.display='none';
+            errormatch.style.display ='inline'
+        }
+    }
+    
+}
+function borderpass() {
+    
+    document.getElementById("pass").style.boxShadow = "3px 3px 3px 3px blue";
+}
+function borderconfirm()
+{
+    document.getElementById("confirm").style.boxShadow = "3px 3px 3px 3px blue";
+}

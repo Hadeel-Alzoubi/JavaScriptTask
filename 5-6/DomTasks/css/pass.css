@@ -1,7 +1,8 @@
-div{
-    text-align: center;
-    align-items: center;
+#btn{
+    display: none;
 }
-/* #btn{
-    visibility: hidden;
-} */
+.errorlin , .errormatch{
+    display: none;
+    color: red;
+
+}
