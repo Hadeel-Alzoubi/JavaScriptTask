@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/form.css">
+    <title>Document</title>
+</head>
+<body>
+    <p style="font-style: italic;"></p>
+    <select name="" id="font" onchange="fontfamily()">
+        <option value="a">serif</option>
+        <option value="b">sans-serif</option>
+        <option value="c">monospace</option>
+        <option value="d">cursive</option>
+    </select>
+    <select name="" id="size" onchange="fontsize()">
+        <option value="10">10px</option>
+        <option value="20">20px</option>
+        <option value="30">30px</option>
+        <option value="40">40px</option>
+        <option value="50">50px</option>
+    </select>
+    
+    <input type="checkbox" id="i" onclick = "italic()">
+        <label for="i">Italic</label>
+   
+    <input type="checkbox" id="b" onclick = "bold()">
+        <label for="b">Bold</label>
+    
+    <input type="checkbox" id="u" onclick = "underline()" >
+        <label for="u">Underline</label>
+        
+    <textarea name="" id="t"></textarea>
+    
+    <script src="/js/form.js"></script>
+</body>
+</html>

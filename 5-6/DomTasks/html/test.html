@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation</title>
+<style>
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+<form id="myForm">
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <span id="passwordError" class="error"></span>
+  </div>
+  <div>
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword">
+    <span id="confirmPasswordError" class="error"></span>
+  </div>
+  <button type="submit" id="submitButton" style="display: none;">Submit</button>
+</form>
+
+<script>
+  const form = document.getElementById('myForm');
+  const passwordInput = document.getElementById('password');
+  const confirmPasswordInput = document.getElementById('confirmPassword');
+  const passwordError = document.getElementById('passwordError');
+  const confirmPasswordError = document.getElementById('confirmPasswordError');
+  const submitButton = document.getElementById('submitButton');
+
+  function validateForm() {
+    let isValid = true;
+
+    // Reset errors
+    passwordError.textContent = '';
+    confirmPasswordError.textContent = '';
+
+    // Check password length
+    if (passwordInput.value.length < 6) {
+      passwordError.textContent = 'Password must be at least 6 characters long.';
+      isValid = false;
+    }
+
+    // Check if passwords match
+    if (passwordInput.value !== confirmPasswordInput.value) {
+      confirmPasswordError.textContent = 'Passwords do not match.';
+      isValid = false;
+    }
+
+    // Show/hide submit button based on validation result
+    submitButton.style.display = isValid ? 'block' : 'none';
+
+    return isValid;
+  }
+
+  form.addEventListener('submit', function(event) {
+    if (!validateForm()) {
+      event.preventDefault(); // Prevent form submission if there are errors
+    }
+  });
+
+  // Re-validate on input change
+  passwordInput.addEventListener('input', validateForm);
+  confirmPasswordInput.addEventListener('input', validateForm);
+</script>
+
+</body>
+</html>
