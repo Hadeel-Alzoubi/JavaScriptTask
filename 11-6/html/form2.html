@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form with Local Storage and Validation</title>
+<style>
+  .error {
+    color: red;
+  }
+</style>
+</head>
+<body>
+
+<h2>Form with Local Storage and Validation</h2>
+
+<form id="myForm">
+  <label for="firstName">First Name:</label><br>
+  <input type="text" id="firstName" name="firstName" required><br>
+  <label for="lastName">Last Name:</label><br>
+  <input type="text" id="lastName" name="lastName" required><br>
+  <label for="bdate">Birth Date:</label><br>
+  <input type="text" id="bdate" name="bdate" placeholder="YYYY-MM-DD" required pattern="\d{4}-\d{2}-\d{2}"><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+  <label for="confirmEmail">Confirm Email:</label><br>
+  <input type="email" id="confirmEmail" name="confirmEmail" required><br>
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password" required><br>
+  <label for="confirmPassword">Confirm Password:</label><br>
+  <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+  <button type="submit">Submit</button>
+</form>
+
+
+<div id="errors"></div>
+
+<script src="/js/form2.js">
+
+</script>
+</body>
+</html>
