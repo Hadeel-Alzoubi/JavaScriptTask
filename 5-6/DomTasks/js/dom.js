@@ -1,4 +1,4 @@
 
 function red(){
-document.querySelector("div").style.backgroundColor = "red";
+document.querySelector(".d").style.backgroundColor = "red";
 }

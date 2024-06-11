@@ -4,23 +4,23 @@ function f() {
     
     if(x.value == "jo")
         {
-            no.src = "/pic/jordan.png";
+            no.src = "/DomTasks/pic/jordan.png";
         }
     else if(x.value == "pa")
         {
-            no.src = "/pic/palestine.jpg"
+            no.src = "/DomTasks/pic/palestine.jpg"
         }
     else if(x.value == "al")
         {
-            no.src = "/pic/algeria.png"
+            no.src = "/DomTasks/pic/algeria.png"
         }
     else if(x.value == "le")
         {
-            no.src = "/pic/lebanon.png"
+            no.src = "/DomTasks/pic/lebanon.png"
         }
     else if(x.value == "no")
         {
-            no.src = "/pic/nopic.png"
+            no.src = "/DomTasks/pic/nopic.png"
         }
         
     
