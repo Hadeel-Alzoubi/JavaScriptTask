@@ -9,6 +9,7 @@ async function animal() {
 
     var jsondata = await response.json()
 
+    document.getElementById("image").src = jsondata[0].image;
 
     for (let i = 0; i < jsondata.length; i++)
         {
