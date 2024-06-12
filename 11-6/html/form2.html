@@ -1,42 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Form with Local Storage and Validation</title>
-<style>
-  .error {
-    color: red;
-  }
-</style>
-</head>
-<body>
-
-<h2>Form with Local Storage and Validation</h2>
-
-<form id="myForm">
-  <label for="firstName">First Name:</label><br>
-  <input type="text" id="firstName" name="firstName" required><br>
-  <label for="lastName">Last Name:</label><br>
-  <input type="text" id="lastName" name="lastName" required><br>
-  <label for="bdate">Birth Date:</label><br>
-  <input type="text" id="bdate" name="bdate" placeholder="YYYY-MM-DD" required pattern="\d{4}-\d{2}-\d{2}"><br>
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br>
-  <label for="confirmEmail">Confirm Email:</label><br>
-  <input type="email" id="confirmEmail" name="confirmEmail" required><br>
-  <label for="password">Password:</label><br>
-  <input type="password" id="password" name="password" required><br>
-  <label for="confirmPassword">Confirm Password:</label><br>
-  <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
-  <button type="submit">Submit</button>
-</form>
-
-
-<div id="errors"></div>
-
-<script src="/js/form2.js">
-
-</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+    <style>
+      form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 3fr;
+        width: 700px;
+        gap: 10px;
+      }
+      
+      .warning {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="firstName">Enter First Name:</label>
+      <input type="text" name="firstName" id="firstName" />
+      <div id="firstName-warning" class="warning"></div>
+      <label for="lastName">Enter Last Name:</label>
+      <input type="text" name="lastName" id="lastName" />
+      <div id="lastName-warning" class="warning"></div>
+      <label for="birthDate">Enter Birth Date:</label>
+      <input type="date" name="birthDate" id="birthDate"/> 
+      <!-- اذا عملت بدل date text ما بعطي error -->
+      <div id="birthDate-warning" class="warning"></div>
+      <label for="email">Enter an Email:</label>
+      <input type="text" name="email" id="email" />
+      <div id="email-warning" class="warning"></div>
+      <label for="confirmEmail">Confirm Email:</label>
+      <input type="text" name="confirmEmail" id="confirmEmail" />
+      <div id="confirmEmail-warning" class="warning"></div>
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" />
+      <div id="password-warning" class="warning"></div>
+      <label for="confermPassword">Confirm Password:</label>
+      <input type="password" name="confirmPassword" id="confirmPassword" />
+      <div id="confirmPassword-warning" class="warning"></div>
+    </form>
+    <script src="/js/form2.js">
+     
+    </script>
+  </body>
 </html>
