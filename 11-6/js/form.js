@@ -8,26 +8,14 @@ document.getElementById("myForm").onclick= function() {
     var img = document.getElementById("img").value;
     var desc = document.getElementById("desc").value;
     var major = document.getElementById("major").value;
-    var html = document.getElementById("html").value;
-    var css = document.getElementById("css").value;
-    var js = document.getElementById("js").value;
+    var html = document.getElementById("html");
+    var css = document.getElementById("css");
+    var js = document.getElementById("js");
     var number = document.getElementById("number").value;
     var num = document.getElementById("num").value;
 
     let array = [];
     
-    if(html.checked)
-      {
-        array.push("html");
-      }
-    if(css.checked )
-      {
-        array.push("css");
-      }
-    if(js.checked )
-      {
-        array.push("js");
-      }
 
     var formData = {
       firstName,
@@ -49,6 +37,20 @@ document.getElementById("myForm").onclick= function() {
     }
   
     
+    if(html.checked)
+      {
+        array.push("html");
+      }
+    if(css.checked )
+      {
+        array.push("css");
+      }
+    if(js.checked )
+      {
+        array.push("js");
+      }
+
+      localStorage.setItem("array" , array);
     localStorage.setItem("formData", JSON.stringify(formData));
     localStorage.setItem("formdata2",JSON.stringify(formdata2));
     localStorage.setItem("formdata3",JSON.stringify(formdata3));
